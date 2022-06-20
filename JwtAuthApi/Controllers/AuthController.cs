@@ -25,7 +25,7 @@ namespace JwtAuthApi.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<ActionResult<string>> Login(UserDto request)
+        public IActionResult Login(UserDto request)
         {
             var login = _authService.Login(request).Result.Value;
 
